@@ -198,7 +198,8 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">
-      Zero-Shot Sim-to-Real Transfer
+       Hardware Results: Policy Trained with
+  <i>N</i><sub>train</sub> = 6
     </h2>
 
     <div class="columns is-multiline has-text-centered">
@@ -235,29 +236,73 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">
-      Safe Multi-Robot Position Exchange Modes
+       Hardware Results: Zero Shot Transfer to swarm size
+  <i>N</i><sub>test</sub> = 8
     </h2>
 
-    <div class="columns is-centered">
-      <div class="column is-half has-text-centered">
-        <img src="./static/images/crazyflie_cen_demonstration.gif"
-             alt="Safe multi-robot position exchange experiment"
-             style="width: 100%; height: auto;">
-        <p class="is-size-6 mt-2">Centralized</p>
+    <div class="columns is-multiline has-text-centered">
+
+      <div class="column is-half">
+        <h3 class="title is-5">2D Position Exchange</h3>
+        <img src="./static/images/zeroshot/zero_shot_N8_hardware.gif"
+             alt="Hardware position exchange"
+             style="width:100%; border-radius:12px;">
       </div>
 
-      <div class="column is-half has-text-centered">
-        <img src="./static/images/crazyflie_decen_demonstration.gif"
-             alt="Safe Crazyflie position exchange experiment"
-             style="width: 100%; height: auto;">
-        <p class="is-size-6 mt-2">Decentralized</p>
+      <div class="column is-half">
+        <h3 class="title is-5">Learned Graph-Barrier Contour</h3>
+        <img src="./static/images/zeroshot/zero_shot_N8_barrier.gif"
+             alt="Graph-barrier contour"
+             style="width:100%; border-radius:12px;">
       </div>
+
+      <div class="column is-half">
+        <h3 class="title is-5">Planar Acceleration Commands</h3>
+        <img src="./static/images/zeroshot/zero_shot_N8_acceleration.gif"
+             alt="Acceleration commands"
+             style="width:100%; border-radius:12px;">
+      </div>
+
+      <div class="column is-half">
+        <h3 class="title is-5">Minimum Inter-Agent Distance</h3>
+        <img src="./static/images/zeroshot/zero_shot_N8_minimum_distance.gif"
+             alt="Minimum distance for each robot"
+             style="width:100%; border-radius:12px;">
+      </div>
+
     </div>
   </div>
 </section>
+
+
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <h2 class="title is-3 has-text-centered">-->
+<!--      Safe Multi-Robot Position Exchange Modes-->
+<!--    </h2>-->
+
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-half has-text-centered">-->
+<!--        <img src="./static/images/crazyflie_cen_demonstration.gif"-->
+<!--             alt="Safe multi-robot position exchange experiment"-->
+<!--             style="width: 100%; height: auto;">-->
+<!--        <p class="is-size-6 mt-2">Centralized</p>-->
+<!--      </div>-->
+
+<!--      <div class="column is-half has-text-centered">-->
+<!--        <img src="./static/images/crazyflie_decen_demonstration.gif"-->
+<!--             alt="Safe Crazyflie position exchange experiment"-->
+<!--             style="width: 100%; height: auto;">-->
+<!--        <p class="is-size-6 mt-2">Decentralized</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 <section class="section">
   <div class="container is-max-desktop">
