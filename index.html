@@ -168,6 +168,13 @@
       </div>
 
     </div>
+    <p class="has-text-centered"
+       style="margin-top: 1rem; font-size: 0.95rem; line-height: 1.6;">
+      Learned graph barrier contours during Crazyflie hardware execution.
+        <strong>Left:</strong> A snapshot of the local barrier landscape
+        <strong>Right:</strong> Its evolution during hardware execution under the
+      distributed policy.
+    </p>
   </div>
 </section>
 
@@ -177,7 +184,17 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Safe F-16 Formation Control</h2>
-
+        <p class="has-text-justified"
+   style="margin: 0 auto 2rem; line-height: 1.6;">
+  Four F-16 aircraft navigate a constrained low-altitude corridor using
+  the GBDiff distributed policy. The policy learns to minimally modify
+  nominal formation-control commands to promote collision avoidance
+  while preserving formation. The task requires at least
+  <strong>100 ft obstacle clearance</strong> and
+  <strong>200 ft inter-aircraft separation</strong>, with altitude
+  maintained between <strong>500 and 1,500 ft</strong> above ground
+  and bank angles limited to <strong>±45°</strong>.
+</p>
         <video
           controls muted autoplay loop playsinline
           preload="metadata"
@@ -192,53 +209,6 @@
   </div>
 </section>
 
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <h2 class="title is-3 has-text-centered">Framework</h2>-->
-
-<!--    <video autoplay loop muted playsinline controls-->
-<!--           style="display:block; width:100%; height:auto;">-->
-<!--      <source src="./static/videos/framework.webm" type="video/webm">-->
-<!--      Your browser does not support embedded video.-->
-<!--    </video>-->
-<!--  </div>-->
-<!--</section>-->
-
-
-
-
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            Eight-Crazyflie position swapping with GBDiff.} We visualize the learned graph barrier for the yellow-highlighted robot (cf1)-->
-<!--            using recorded hardware test data. Blue and red regions indicate positive and negative barrier values, respectively, while black contours mark h<sub>&phi;</sub>.-->
-<!--            Gray lines depict graph edges, and the dashed circle marks the communication radius.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
-<!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
-<!--   <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Graph Barrier Contour</h2>-->
-
-<!--        <img src="./static/images/hardware_gcbf_ego_5_step_980.gif"-->
-<!--             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"-->
-<!--             style="display: block; width: 100%; height: auto; border-radius: 12px;">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--    &lt;!&ndash;/ Paper video. &ndash;&gt;-->
-<!--  </div>-->
-<!--</section>-->
 
 
 <section class="section">
@@ -247,6 +217,15 @@
        Hardware Results: Policy Trained with
   <i>N</i><sub>train</sub> = 6
     </h2>
+
+<p class="has-text-centered"
+   style="max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+  Six Crazyflies perform a coordinated position-exchange task using
+  a GBDiff policy trained in simulation with six robots. The policy
+  transfers directly to hardware without fine-tuning, computing
+  control commands from local graph observations without online
+  diffusion sampling or centralized coordination.
+</p>
 
     <div class="columns is-multiline has-text-centered">
 
@@ -290,6 +269,14 @@
   <i>N</i><sub>test</sub> = 8
     </h2>
 
+    <p class="has-text-centered"
+   style="max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+  Eight Crazyflies execute a position-exchange task using the GBDiff
+  policy trained for 6 robots without hardware fine-tuning. Each robot acts on local graph
+  observations, coordinating with its neighbors while maintaining
+  inter-robot separation, without online diffusion sampling.
+</p>
+
     <div class="columns is-multiline has-text-centered">
 
       <div class="column is-half">
@@ -324,59 +311,49 @@
   </div>
 </section>
 
-
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <h2 class="title is-3 has-text-centered">-->
-<!--      Safe Multi-Robot Position Exchange Modes-->
-<!--    </h2>-->
-
-<!--    <div class="columns is-centered">-->
-<!--      <div class="column is-half has-text-centered">-->
-<!--        <img src="./static/images/crazyflie_cen_demonstration.gif"-->
-<!--             alt="Safe multi-robot position exchange experiment"-->
-<!--             style="width: 100%; height: auto;">-->
-<!--        <p class="is-size-6 mt-2">Centralized</p>-->
-<!--      </div>-->
-
-<!--      <div class="column is-half has-text-centered">-->
-<!--        <img src="./static/images/crazyflie_decen_demonstration.gif"-->
-<!--             alt="Safe Crazyflie position exchange experiment"-->
-<!--             style="width: 100%; height: auto;">-->
-<!--        <p class="is-size-6 mt-2">Decentralized</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Zero-Shot Sim-to-Real Transfer</h2>-->
-
-<!--        <img src="./static/images/sil_hardware_native_common_clock_times_serif.gif"-->
-<!--             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"-->
-<!--             style="display: block; width: 100%; height: auto; border-radius: 12px;">-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">SIL to Hardware Overlay</h2>
+    <h2 class="title is-3 has-text-centered">SIL to Hardware Comparison</h2>
+    <p class="has-text-centered"
+   style="max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+  Comparison of the same GBDiff policy in software-in-the-loop (SIL)
+  simulation and hardware for 8 crazyflies. Trajectories are synchronized
+  from policy activation to compare coordination behavior, minimum
+  inter-robot separation, completion time, and simulation-to-hardware
+  trajectory deviation.
+</p>
 
-        <img src="./static/images/sil_hardware_ghost_overlay_with_footage.gif"
-             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"
-             style="display: block; width: 100%; height: auto; border-radius: 12px;">
-      </div>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;
+                width: 80%; margin: 0 auto;">
+
+      <!-- Row 1 -->
+      <img
+        src="./static/images/sil_hardware_ghost_overlay_with_footage.gif"
+        alt="SIL to hardware overlay — experiment 1"
+        style="display: block; width: 100%; height: auto; border-radius: 12px;">
+
+      <!-- Row 2: replace the filename -->
+      <img
+        src="./static/images/sil_hardware_native_common_clock_times_serif_with_edges.gif"
+        alt="SIL to hardware overlay — experiment 2"
+        style="display: block; width: 100%; height: auto; border-radius: 12px;">
+
+      <!-- Row 3: replace the filename -->
+      <img
+        src="./static/images/hardware_stats.png"
+        alt="SIL to hardware overlay — experiment 3"
+        style="display: block; width: 100%; height: auto; border-radius: 12px;">
+
     </div>
   </div>
+  <p class="has-text-justified"
+   style="max-width: 850px; margin: 2rem auto 0; line-height: 1.6;">
+  The policy was trained in simulation and deployed directly on Crazyflie
+  hardware without additional training or parameter adaptation.
+  Despite simulation-to-hardware trajectory deviations, the policy
+  successfully completed the task, demonstrating
+  <strong>zero-shot simulation-to-real transfer</strong>.
+</p>
 </section>
 
 
