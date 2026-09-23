@@ -356,6 +356,50 @@
 </p>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      Simulation Results and Horizon Ablation
+    </h2>
+
+    <p class="has-text-centered"
+       style="max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+      Safety and success rates across Double Integrator, Linear Drone,
+      and Crazyflie benchmarks with eight robots and four obstacles.
+      We examine the effect of the diffusion horizon and compare
+      GBDiff with existing methods.
+    </p>
+
+    <img
+      src="./static/images/benchmark_results.png"
+      alt="Diffusion horizon ablation and benchmark comparison of safety and success rates"
+      style="display: block; width: 100%; height: auto;">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      Zero-Shot Scalability to 512 Robots
+    </h2>
+
+    <p class="has-text-centered"
+       style="max-width: 850px; margin: 0 auto 2rem; line-height: 1.6;">
+      Trained with eight Crazyflies in obstacle-free simulation,
+      the graph barrier and distributed policy are evaluated
+      without retraining on teams of up to
+      <strong>512 robots</strong>.
+      Missing baseline points indicate that the prescribed
+      computation-time or memory budget was exceeded.
+    </p>
+
+    <img
+      src="./static/images/scalability_results.png"
+      alt="Safety and success rates as the Crazyflie swarm increases from 8 to 512 robots"
+      style="display: block; width: 100%; max-width: 850px;
+             height: auto; margin: 0 auto;">
+  </div>
+</section>
 
 </body>
 </html>
