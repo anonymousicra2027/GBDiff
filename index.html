@@ -178,36 +178,72 @@
   </div>
 </section>
 
-<!-- Separate F-16 section -->
+<!-- F-16 Formation Control -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+
         <h2 class="title is-3">Safe F-16 Formation Control</h2>
+
         <p class="has-text-justified"
-   style="margin: 0 auto 2rem; line-height: 1.6;">
-  Four F-16 aircraft navigate a constrained low-altitude corridor using
-  the GBDiff distributed policy. The policy learns to minimally modify
-  nominal formation-control commands to promote collision avoidance
-  while preserving formation. The task requires at least
-  <strong>100 ft obstacle clearance</strong> and
-  <strong>200 ft inter-aircraft separation</strong>, with altitude
-  maintained between <strong>500 and 1,500 ft</strong> above ground
-  and bank angles limited to <strong>±45°</strong>.
-</p>
+           style="margin: 0 auto 2rem; line-height: 1.6;">
+          Four F-16 aircraft navigate a constrained low-altitude corridor using
+          the GBDiff distributed policy. The policy learns to minimally modify
+          nominal formation-control commands to promote collision avoidance
+          while preserving formation. The task requires at least
+          <strong>100 ft obstacle clearance</strong> and
+          <strong>at least 200 ft inter-aircraft separation</strong>, with altitude
+          maintained between <strong>500 and 1,500 ft</strong> above ground
+          and bank angles limited to <strong>±45°</strong>.
+        </p>
+
+        <!-- Safety metrics video -->
         <video
-          controls muted autoplay loop playsinline
+          controls
+          muted
+          autoplay
+          loop
+          playsinline
           preload="metadata"
-          style="display:block; width:100%; height:auto;">
+          style="
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+          ">
+          <source
+            src="./static/videos/f16_metrics.mp4"
+            type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+
+        <!-- F-16 formation-control video -->
+        <video
+          controls
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="metadata"
+          style="
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+          ">
           <source
             src="./static/videos/f16_formation_control.mp4"
             type="video/mp4">
           Your browser does not support the video element.
         </video>
+
       </div>
     </div>
   </div>
 </section>
+
 
 
 
