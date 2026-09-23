@@ -79,46 +79,56 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+
         <div class="content has-text-justified">
           <p>
-            Safe and scalable control of large multi-robot systems (MRS) remains challenging under local sensing and limited actuation. Existing  learning-based
-            approaches commonly rely on gradient-based optimization of the current policy to generate pointwise data for supervision, providing limited coverage
-            of the coupled interactions that can arise over finite horizons. We introduce \emph{Graph Barrier Diffusion (GBDiff)}, a framework that combines
-            model-based diffusion with graph barrier certificates to reason about finite-horizon, actuator-constrained multi-robot interactions.
-            GBDiff performs sampling-based optimization over joint control sequences and propagates the sampled controls through the system dynamics,
-            while jointly evaluating interactions among neighboring robots, to generate diverse, dynamically feasible, and actuator-constrained trajectories.
-            These trajectories are used to learn graph barrier certificates and distill diffusion-guided coordination modes into a distributed,
-            safety-aware policy. Diffusion is used only during training, enabling efficient distributed execution without iterative sampling.
-            Simulations across multi-robot systems of increasing dynamical complexity, including high-dimensional, non-control-affine F-16s, together
-            with hardware experiments involving Crazyflie position exchange, demonstrate improved safety, task performance, and scalability relative to
+            Safe and scalable control of large multi-robot systems (MRS) remains
+            challenging under local sensing and limited actuation. Existing
+            learning-based approaches commonly rely on gradient-based optimization
+            of the current policy to generate pointwise data for supervision,
+            providing limited coverage of the coupled interactions that can arise
+            over finite horizons. We introduce
+            <em>Graph Barrier Diffusion (GBDiff)</em>, a framework that combines
+            model-based diffusion with graph barrier certificates to reason about
+            finite-horizon, actuator-constrained multi-robot interactions.
+            GBDiff performs sampling-based optimization over joint control
+            sequences and propagates the sampled controls through the system
+            dynamics, while jointly evaluating interactions among neighboring
+            robots, to generate diverse, dynamically feasible, and
+            actuator-constrained trajectories. These trajectories are used to
+            learn graph barrier certificates and distill diffusion-guided
+            coordination modes into a distributed, safety-aware policy.
+            Diffusion is used only during training, enabling efficient distributed
+            execution without iterative sampling. Simulations across multi-robot
+            systems of increasing dynamical complexity, including
+            high-dimensional, non-control-affine F-16s, together with hardware
+            experiments involving Crazyflie position exchange, demonstrate
+            improved safety, task performance, and scalability relative to
             existing methods.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-     <div class="columns is-centered has-text-centered">
+    <!-- Framework video -->
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Safe F-16 Formation Control</h2>
-        <div class="publication-video">
-<!--          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"-->
-<!--                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-          <video controls muted autoplay loop playsinline preload="metadata">
-            <source src="./static/videos/f16_formation_control.mp4"
-                    type="video/mp4">
-                    Your browser does not support the video element.
-          </video>
-        </div>
+        <h2 class="title is-3">Framework</h2>
+
+        <iframe
+          src="https://drive.google.com/file/d/1Pn4fJMDHVkX8ajHNTQAiuEI2AayHX8bx/preview"
+          title="GBDiff Framework"
+          style="display:block; width:100%; aspect-ratio:16/9; border:0;"
+          allow="autoplay; fullscreen"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-    <!-- Paper video. -->
-    <!--/ Paper video. -->
   </div>
 </section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -160,6 +170,42 @@
     </div>
   </div>
 </section>
+
+<!-- Separate F-16 section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Safe F-16 Formation Control</h2>
+
+        <video
+          controls muted autoplay loop playsinline
+          preload="metadata"
+          style="display:block; width:100%; height:auto;">
+          <source
+            src="./static/videos/f16_formation_control.mp4"
+            type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <h2 class="title is-3 has-text-centered">Framework</h2>-->
+
+<!--    <video autoplay loop muted playsinline controls-->
+<!--           style="display:block; width:100%; height:auto;">-->
+<!--      <source src="./static/videos/framework.webm" type="video/webm">-->
+<!--      Your browser does not support embedded video.-->
+<!--    </video>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+
 
 
 <!--<section class="section">-->
@@ -304,23 +350,19 @@
 <!--  </div>-->
 <!--</section>-->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Zero-Shot Sim-to-Real Transfer</h2>
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Zero-Shot Sim-to-Real Transfer</h2>-->
 
-        <img src="./static/images/sil_hardware_native_common_clock_times_serif.gif"
-             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"
-             style="display: block; width: 100%; height: auto; border-radius: 12px;">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
+<!--        <img src="./static/images/sil_hardware_native_common_clock_times_serif.gif"-->
+<!--             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"-->
+<!--             style="display: block; width: 100%; height: auto; border-radius: 12px;">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 
 
 <section class="section">
@@ -336,22 +378,6 @@
     </div>
   </div>
 </section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Hardware Experiments</h2>
-        <img src="./static/images/hardware_control_trajectory_with_bounds.gif"
-             alt="Zero-shot simulation-to-real transfer on Crazyflie hardware"
-             style="display: block; width: 100%; height: auto; border-radius: 12px;">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
 
 
 </body>
